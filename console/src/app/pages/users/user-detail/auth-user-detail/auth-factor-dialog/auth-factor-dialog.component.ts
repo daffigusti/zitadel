@@ -14,6 +14,7 @@ export enum AuthFactorType {
   U2F,
   OTPSMS,
   OTPEMAIL,
+  OTPWA,
 }
 
 @Component({

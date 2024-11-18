@@ -23,6 +23,8 @@ func SecondFactorTypeToDomain(secondFactorType policy_pb.SecondFactorType) domai
 		return domain.SecondFactorTypeOTPEmail
 	case policy_pb.SecondFactorType_SECOND_FACTOR_TYPE_OTP_SMS:
 		return domain.SecondFactorTypeOTPSMS
+	case policy_pb.SecondFactorType_SECOND_FACTOR_TYPE_OTP_WA:
+		return domain.SecondFactorTypeOTPWA
 	default:
 		return domain.SecondFactorTypeUnspecified
 	}
@@ -46,6 +48,8 @@ func ModelSecondFactorTypeToPb(secondFactorType domain.SecondFactorType) policy_
 		return policy_pb.SecondFactorType_SECOND_FACTOR_TYPE_OTP_EMAIL
 	case domain.SecondFactorTypeOTPSMS:
 		return policy_pb.SecondFactorType_SECOND_FACTOR_TYPE_OTP_SMS
+	case domain.SecondFactorTypeOTPWA:
+		return policy_pb.SecondFactorType_SECOND_FACTOR_TYPE_OTP_WA
 	default:
 		return policy_pb.SecondFactorType_SECOND_FACTOR_TYPE_UNSPECIFIED
 	}

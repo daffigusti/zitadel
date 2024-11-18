@@ -133,6 +133,8 @@ func NewInstance(ctx context.Context) *Instance {
 			},
 		},
 	})
+	println("Setup domain")
+	println(primaryDomain)
 	if err != nil {
 		panic(err)
 	}
@@ -315,6 +317,8 @@ func WithAuthorizationToken(ctx context.Context, token string) context.Context {
 	if !ok {
 		md = make(metadata.MD)
 	}
+	// token = "Ups0HI6TdsfmiOkQ5fSD-_mmzQ8ORlbWJ5w0mApfCzQ2hIp3hdAm51FMPY-N_Ccm030CiMYgWLZyQOZiPSghpHspMY9TG3R4Mq183w5O"
+	println(token)
 	md.Set("Authorization", fmt.Sprintf("Bearer %s", token))
 	return metadata.NewOutgoingContext(ctx, md)
 }

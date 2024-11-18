@@ -8,7 +8,8 @@ const (
 	SecondFactorTypeU2F
 	SecondFactorTypeOTPEmail
 	SecondFactorTypeOTPSMS
-
+	SecondFactorTypeOTPWA
+	
 	secondFactorCount
 )
 

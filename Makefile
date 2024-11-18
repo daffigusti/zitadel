@@ -160,7 +160,7 @@ console_lint:
 	yarn lint
 
 .PHONY: core_lint
-core_lint:
+core_lint:2
 	golangci-lint run \
 		--timeout 10m \
 		--config ./.golangci.yaml \
